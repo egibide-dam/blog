@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             EntradaSeeder::class,
+            ComentarioSeeder::class,
         ]);
     }
 }
