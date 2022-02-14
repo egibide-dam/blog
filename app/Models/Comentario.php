@@ -18,4 +18,9 @@ class Comentario extends Model
         'updated_at' => 'datetime',
         'fecha' => 'datetime',
     ];
+
+    public function entrada()
+    {
+        return $this->belongsTo(Entrada::class);
+    }
 }

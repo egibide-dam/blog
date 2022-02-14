@@ -18,4 +18,9 @@ class Entrada extends Model
         'updated_at' => 'datetime',
         'fecha' => 'datetime',
     ];
+
+    public function comentarios()
+    {
+        return $this->hasMany(Comentario::class);
+    }
 }
