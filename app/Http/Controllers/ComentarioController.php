@@ -28,15 +28,17 @@ class ComentarioController extends Controller
             'email' => 'required',
         ]);
 
+        $entrada = request('entrada_id');
+
         Comentario::create([
             'email' => request('email'),
             'texto' => request('texto'),
-            'fecha' => request('fecha'),
+            'fecha' => now(),
             'visible' => $request->has('visible'),
-            'entrada_id' => request('entrada_id'),
+            'entrada_id' => $entrada,
         ]);
 
-        return redirect(route('comentarios.index'));
+        return redirect(route('entradas.show', compact('entrada')));
     }
 
     public function show(Comentario $comentario)
