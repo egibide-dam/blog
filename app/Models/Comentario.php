@@ -10,7 +10,7 @@ class Comentario extends Model
     use HasFactory;
 
     protected $fillable = [
-        'email', 'texto', 'fecha', 'publicado'
+        'email', 'texto', 'fecha', 'publicado', 'entrada_id'
     ];
 
     protected $casts = [
