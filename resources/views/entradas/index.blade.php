@@ -12,7 +12,7 @@
             <th>Título</th>
             <th>Fecha</th>
             <th>Visible</th>
-            <th colspan="2">Acciones</th>
+            <th colspan="3">Acciones</th>
         </tr>
         </thead>
         <tbody class="align-middle">
@@ -22,6 +22,9 @@
                 <td>{{ $entrada->fecha }}</td>
                 <td>{{ $entrada->visible ? 'Sí' : 'No' }}</td>
                 <td><a class="btn btn-secondary" href="{{ route('entradas.edit', $entrada->id) }}">Editar</a></td>
+                <td>
+                    <a class="btn btn-success" href="{{ route('entradas.comentarios', $entrada->id) }}">Comentar</a>
+                </td>
                 <td>
                     <form action="{{ route('entradas.destroy', $entrada->id) }}" method="POST"
                           onsubmit="return confirm('¿Estás seguro?');">

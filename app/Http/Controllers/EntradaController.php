@@ -67,4 +67,9 @@ class EntradaController extends Controller
 
         return back();
     }
+
+    public function comentarios(Entrada $entrada)
+    {
+        return view('entradas.comentarios', compact('entrada'));
+    }
 }

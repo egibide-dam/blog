@@ -17,5 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [EntradaController::class, 'index']);
 
+Route::get('entradas/{entrada}/comentarios', [EntradaController::class, 'comentarios'])
+    ->name('entradas.comentarios');
+
 Route::resource('entradas', EntradaController::class);
 Route::resource('comentarios', ComentarioController::class);
